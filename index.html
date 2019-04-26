@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice3p3</title>
+</head>
+<body>
+  <label for='text'>Entrez un nombre</label>
+  <input type="number" id="number" value="resultat" />
+  <input type="button" id="button" value="Cliquez-moi" />
+
+  <script src="assets\js\jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+    //var guessNumber = 50;
+    var guessNumber = Math.floor(Math.random() * 100);
+    console.log(guessNumber);
+  $('#button').click(function(){
+    var playerChoice = $('#number').val();
+    if (playerChoice > guessNumber) {
+        alert ('TROP GRAND');
+    } else if ( playerChoice < guessNumber ) {
+        alert('TROP PETIT');
+    } else {
+        alert ('GAGNE');
+    }
+ });
+
+
+</script>
+</body>
+</html>
